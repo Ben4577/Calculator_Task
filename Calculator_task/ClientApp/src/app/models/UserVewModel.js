@@ -2,8 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var UserViewModel = /** @class */ (function () {
     function UserViewModel() {
-        this.firstName = "";
-        this.currencySelected = "";
+        this.result = "";
+        this.error = "";
     }
     return UserViewModel;
 }());

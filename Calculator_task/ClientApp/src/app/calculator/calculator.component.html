@@ -1,0 +1,56 @@
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+
+
+
+        <div class="row mb-2">
+          <div class="col-md-2">
+            <label for="title">First Number</label>
+          </div>
+          <div class="col-md-3">
+            <input #firstName="ngModel" [(ngModel)]="user.firstNumber" name="firstNumber" id="firstNumber" type="text" class="form-control" required>
+          </div>
+        </div>
+
+
+        <div class="row mb-2">
+          <div class="col-md-2">
+            <label for="title">Second Number</label>
+          </div>
+          <div class="col-md-3">
+            <input #firstName="ngModel" [(ngModel)]="user.secondNumber" name="secondNumber" id="secondNumber" type="text" class="form-control" required>
+          </div>
+        </div>
+
+
+        <div class="row mb-2">
+          <div class="offset-md-2 col-md-2">
+            <button type="button" (click)="add();" class="btn btn-primary" style="width:7em;" id="plus">Plus</button>
+          </div>
+        </div>
+
+        <div class="row mb-2">
+          <div class="offset-md-2 col-md-2">
+            <button type="button" (click)="minus();" class="btn btn-warning" style="width:7em;" id="minus">Minus</button>
+          </div>
+        </div>
+
+        <hr />
+
+        <br>
+
+        <div class="row mb-2">
+          <div class="col-md-12">
+            <p *ngIf="user.error" style="color: red;">{{user.error}}</p>
+            <p style="color: green;">Calculation is: {{user.result}}</p>
+          </div>
+        </div>
+
+
+
+    </div>
+  </div>
+</div>

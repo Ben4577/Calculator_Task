@@ -1,7 +1,13 @@
 export class UserViewModel {
-    firstName: string = "";
-    currencySelected: string = "";
-    gBPAmount: number;
-    convertedAmount: number;
-    timeConverted: Date;
+
+
+  firstNumber: string;
+  secondNumber: string;
+
+  firstNum: number;
+  secondNum: number;
+
+  result: string = "";
+  error: string = "";
+
 }

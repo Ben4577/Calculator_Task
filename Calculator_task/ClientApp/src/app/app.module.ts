@@ -7,8 +7,7 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
-import { CurrencyConversionComponent } from './currency-conversion/currency-conversion.component';
-import { CurrencyQueryComponent } from './currency-query/currency-query.component';
+import { CalculatorComponent } from './calculator/calculator.component';
 import { UserService } from './services/user.service';
 
 @NgModule({
@@ -16,8 +15,7 @@ import { UserService } from './services/user.service';
     AppComponent,
     NavMenuComponent,
     HomeComponent,
-    CurrencyConversionComponent,
-    CurrencyQueryComponent
+    CalculatorComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -25,8 +23,7 @@ import { UserService } from './services/user.service';
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
-        { path: 'currency-converter', component: CurrencyConversionComponent },
-        { path: 'currency-query', component: CurrencyQueryComponent },
+        { path: 'calculator', component: CalculatorComponent },
     ])
   ],
   providers: [UserService],

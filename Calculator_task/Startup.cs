@@ -41,7 +41,7 @@ namespace Pharmacy2U_task
                 configuration.RootPath = "ClientApp/dist";
             });
 
-            services.AddScoped<IUserService, UserService>();
+            services.AddScoped<ISimpleCalculator, SimpleCalculator>();
 
         }
 

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Pharmacy2U_task.Services
 {
-    public interface IUserService
+    public interface ISimpleCalculator
     {
-        List<User> InitialiseUserList();
-        List<User> SaveUserConversions(UserViewModel user, List<User> userListSaved);
+        public double Add(double firstNum, double secondNum);
+        public double Subtract(double firstNum, double secondNum);
     }
 }
