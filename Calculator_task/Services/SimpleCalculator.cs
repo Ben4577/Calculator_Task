@@ -12,9 +12,6 @@ namespace Pharmacy2U_task.Services
 {
     public class SimpleCalculator : ISimpleCalculator
     {
-        //ISession session;
-        private List<User> userList;
-        const string sessionKey = "userList";
 
        public double Add(double firstNum, double secondNum)
        {

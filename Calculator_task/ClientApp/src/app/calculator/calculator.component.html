@@ -4,53 +4,81 @@
   <div class="row">
     <div class="col-md-12">
 
+      <div class="row">
+        <div class="col-md-6">
 
+          <div class="card mb-4">
+            <div class="card-body bg-light">
+              <p  [ngStyle]="{'color' : getColurStyles()}">You can change the colour of the calculator page here.</p>
 
-        <div class="row mb-2">
-          <div class="col-md-2">
-            <label for="title">First Number</label>
+              <p  [ngStyle]="{'color' : getColurStyles()}">Font Colour:</p>
+
+              <div *ngFor="let fcolour of fcolours">
+                <label for="{{fcolour}}">
+                  <input id="{{fcolour}}" [value]='fcolour' type="radio" name="fcolours" [(ngModel)]="favColour">
+                  {{fcolour}}
+                </label>
+              </div>
+
+              <div>
+                <p>The selected Colour is <b [ngStyle]="{'color' : getColurStyles()}">{{favColour}}</b></p>
+              </div>
+
+            </div>
           </div>
-          <div class="col-md-3">
-            <input #firstName="ngModel" [(ngModel)]="user.firstNumber" name="firstNumber" id="firstNumber" type="text" class="form-control" required>
-          </div>
+
         </div>
+      </div>
 
 
-        <div class="row mb-2">
-          <div class="col-md-2">
-            <label for="title">Second Number</label>
-          </div>
-          <div class="col-md-3">
-            <input #firstName="ngModel" [(ngModel)]="user.secondNumber" name="secondNumber" id="secondNumber" type="text" class="form-control" required>
-          </div>
+
+      <div class="row mb-2">
+        <div class="col-md-2">
+          <label for="title" [ngStyle]="{'color' : getColurStyles()}">First Number</label>
         </div>
-
-
-        <div class="row mb-2">
-          <div class="offset-md-2 col-md-2">
-            <button type="button" (click)="add();" class="btn btn-primary" style="width:7em;" id="plus">Plus</button>
-          </div>
+        <div class="col-md-3">
+          <input #firstName="ngModel" [(ngModel)]="user.firstNumber" name="firstNumber" id="firstNumber" type="text" class="form-control" required>
         </div>
+      </div>
 
-        <div class="row mb-2">
-          <div class="offset-md-2 col-md-2">
-            <button type="button" (click)="minus();" class="btn btn-warning" style="width:7em;" id="minus">Minus</button>
-          </div>
+
+      <div class="row mb-2">
+        <div class="col-md-2">
+          <label for="title" [ngStyle]="{'color' : getColurStyles()}">Second Number</label>
         </div>
-
-        <hr />
-
-        <br>
-
-        <div class="row mb-2">
-          <div class="col-md-12">
-            <p *ngIf="user.error" style="color: red;">{{user.error}}</p>
-            <p style="color: green;">Calculation is: {{user.result}}</p>
-          </div>
+        <div class="col-md-3">
+          <input #firstName="ngModel" [(ngModel)]="user.secondNumber" name="secondNumber" id="secondNumber" type="text" class="form-control" required>
         </div>
+      </div>
+
+
+      <div class="row mb-2">
+        <div class="offset-md-2 col-md-2">
+          <button type="button" (click)="add();" class="btn btn-primary" style="width:7em;" id="plus">Plus</button>
+        </div>
+      </div>
+
+      <div class="row mb-2">
+        <div class="offset-md-2 col-md-2">
+          <button type="button" (click)="minus();" class="btn btn-warning" style="width:7em;" id="minus">Minus</button>
+        </div>
+      </div>
+
+      <hr />
+
+      <br>
+
+      <div class="row mb-2">
+        <div class="col-md-12">
+          <p *ngIf="user.error" style="color: red;">{{user.error}}</p>
+          <p style="color: green;">Calculation is: {{user.result}}</p>
+        </div>
+      </div>
 
 
 
     </div>
-  </div>
-</div>
+      </div>
+    </div>
+
+

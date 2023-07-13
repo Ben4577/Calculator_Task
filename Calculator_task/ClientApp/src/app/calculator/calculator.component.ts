@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { UserViewModel } from '../models/UserVewModel';
 import { UserService } from '../services/user.service';
 
@@ -9,15 +9,23 @@ import { UserService } from '../services/user.service';
 })
 export class CalculatorComponent implements OnInit {
 
-    constructor(private userService: UserService) { }
+  constructor(private userService: UserService) {}
 
-    user: UserViewModel;
+  favColour: string = "Black";
+  fcolours: string[] = ["Red", "Yellow", "Blue", "Black"];
+
+  user: UserViewModel;
 
     ngOnInit() {
       this.user = new UserViewModel();
       this.user.result = "";
       this.user.error = "";
     }
+
+
+  getColurStyles() {
+    return this.favColour;
+  }
 
 
   add() {
@@ -99,6 +107,8 @@ export class CalculatorComponent implements OnInit {
 
   }
 
+
+  
 
     
 
